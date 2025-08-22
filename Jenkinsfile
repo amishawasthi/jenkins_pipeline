@@ -1,25 +1,19 @@
-/ Example Jenkinsfile (Declarative Pipeline)
-    pipeline {
-        agent any
+pipeline {
+    agent any
 
-        stages {
-            stage('Build') {
-                steps {
-                    echo 'Building the application...'
-                    // Add your build commands here (e.g., mvn clean install, npm build)
-                }
+    stages {
+        stage('Build') {
+            steps {
+                // Replace with your actual build command, e.g.:
+                sh 'echo "Building project..."'
             }
-            stage('Test') {
-                steps {
-                    echo 'Running tests...'
-                    // Add your test commands here (e.g., mvn test, npm test)
-                }
-            }
-            stage('Deploy') {
-                steps {
-                    echo 'Deploying the application...'
-                    // Add your deployment commands here
-                }
+        }
+
+        stage('Test') {
+            steps {
+                // Replace with your actual test command
+                sh 'echo "Running tests..."'
             }
         }
     }
+}
